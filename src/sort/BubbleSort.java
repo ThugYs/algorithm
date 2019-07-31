@@ -8,6 +8,7 @@ public class BubbleSort {
 
         for (int i = 0; i < unsorted.length; i++)
         {
+            System.out.print("bubble");
             for (int j = 0; j < unsorted.length - i-1; j++)
             {
                 if (unsorted[j] > unsorted[j+1])
@@ -33,6 +34,7 @@ public class BubbleSort {
     }
 
     public static void main(String[] args) {
+
         int [] arr = new int[]{6,5,1,2,4,3};
         print(arr);
         bubble_sort(arr);
