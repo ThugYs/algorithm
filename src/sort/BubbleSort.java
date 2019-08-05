@@ -1,18 +1,16 @@
 package sort;
 
-import java.sql.SQLOutput;
 
 public class BubbleSort {
-    static void bubble_sort(int[] unsorted)
-    {
-
-        for (int i = 0; i < unsorted.length; i++)
-        {
-            System.out.print("bubble");
-            for (int j = 0; j < unsorted.length - i-1; j++)
-            {
-                if (unsorted[j] > unsorted[j+1])
-                {
+    static void bubble_sort(int[] unsorted) {
+        System.out.println("bubble : time+O(n^2), spaceO(1)");
+        if(unsorted == null || unsorted.length <2 ){
+        return;
+        }
+        for (int i = 0; i < unsorted.length; i++) {
+            //unsorted.length - i-1 不然j<unsorted.length - 0， j+1=unsorted.length - 0+1+1指针越界
+            for (int j = 0; j < unsorted.length - i-1; j++) {
+                if (unsorted[j] > unsorted[j+1]) {
 //                    int temp =unsorted[j];
 //                    unsorted[j] = unsorted[j+1];
 //                    unsorted[j+1] = temp;
